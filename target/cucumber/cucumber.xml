@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="10" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="62" time="3,894.631">
+    <testcase classname="Create Intent" name="creating intent with all fields filled with new data" time="9.372">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+And request body............................................................passed
+When user send a post request to the endpoint "intents/"....................passed
+Then user should receive status code 201....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Create Intent" name="creating intent with all fields empty" time="1.182">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+And request body............................................................passed
+When user send a post request to the endpoint "intents/"....................passed
+Then user should receive status code 422....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Create Intent" name="creating intent with only mandatory fields" time="3.759">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+And request body............................................................passed
+When user send a post request to the endpoint "intents/"....................passed
+Then user should receive status code 201....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Create Intent" name="creating intent without filling mandatory field" time="1.202">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+And request body............................................................passed
+When user send a post request to the endpoint "intents/"....................passed
+Then user should receive status code 422....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Create Intent" name="creating intent with Llm_tshooting false" time="4.427">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+And request body............................................................passed
+When user send a post request to the endpoint "intents/"....................passed
+Then user should receive status code 201....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="DeleteIntent verification" name="Verify delete intent in the list" time="1.178">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+When user hit the delete endpoint "intents/947".............................passed
+Then user should receive status code 200....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="DeleteIntent verification" name="Verify delete intent with already deleted id" time="1.161">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+When user hit the delete endpoint "intents/924".............................passed
+Then user should receive status code 404....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="GetIntentById verification" name="Verify intents in the list with id 817" time="1.189">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+When user hit the endpoint "intents/817"....................................passed
+Then user should receive status code 200....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="GetIntentById verification" name="Verify intents in the list with id 502" time="1.148">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+When user hit the endpoint "intents/502"....................................passed
+Then user should receive status code 200....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="GetIntentById verification" name="Verify intents in the list with id 507" time="1.157">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+When user hit the endpoint "intents/507"....................................passed
+Then user should receive status code 200....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="GetIntentList verification" name="Verify intents in the list with id 501" time="1.177">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+When user hit the endpoint "intents/".......................................passed
+Then user should receive status code 200....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="GetMessage from Endpoint" name="Ticket_21 - Verify message retrieval for ticket 21" time="9.152">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+When a user requests the message from the endpoint "intentclassifier" with parameter "Subject : Go Get Em Tiger (GGET)- Montana Ave/Santa Monica CA - GGET Montana kitchen closing at 2pm Description :@U023631H5QC Montana's kitchen will close today at 2pm. Can you please turn off online food orders at 2pm today? Thank you." and parameter "21" and parameter "2024-6-22".passed
+Then the user should receive a response with status code 200................passed
+And the user should receive the output "pause_online_ordering"..............passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="GetMessage from Endpoint" name="Ticket_22 - Verify message retrieval for ticket 22" time="8.962">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+When a user requests the message from the endpoint "intentclassifier" with parameter "Subject :Roti SLP close early Description :please shut off online ordering an roti.com today at 6pm. " and parameter "22" and parameter "2024-5-7".passed
+Then the user should receive a response with status code 200................passed
+And the user should receive the output "pause_online_ordering"..............passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="GetMessage from Endpoint" name="Ticket_23 - Verify message retrieval for ticket 23" time="8.94">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+When a user requests the message from the endpoint "intentclassifier" with parameter "Subject :Mooyah burger - Carlsbad Description :stop ordering at the Mooyah Burger Carlsbad at 8pm on 3/1/24. " and parameter "23" and parameter "2024-6-22".passed
+Then the user should receive a response with status code 200................passed
+And the user should receive the output "pause_online_ordering"..............passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="GetMessage from Endpoint" name="Ticket_24 - Verify message retrieval for ticket 24" time="9.059">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+When a user requests the message from the endpoint "intentclassifier" with parameter "Subject :GGeT Row Description :GGeT Row
+Issue: online food orders must turn off from 12:30p-1p (solo kitchen team) and kitchen close at 2pm" and parameter "24" and parameter "2024-05-07".passed
+Then the user should receive a response with status code 200................passed
+And the user should receive the output "pause_online_ordering"..............passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="GetMessage from Endpoint" name="Ticket_25 - Verify message retrieval for ticket 25" time="9.251">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+When a user requests the message from the endpoint "intentclassifier" with parameter "Subject Gregorys Coffee - GC38 Description :Hi Team goodmorning, a few customers have been saying the wifi isn't working our music is on and th wifi works on my phone. Is there any way you guys  cab check on the wifi and see if there's anything wrong with it? Thank you in advance for your hel" and parameter "25" and parameter "2024-05-07".passed
+Then the user should receive a response with status code 200................passed
+And the user should receive the output "network_alert"......................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="GetMessage from Endpoint" name="Ticket_26 - Verify message retrieval for ticket 26" time="12.118">
+        <failure message="expected:&lt;[pause_online_ordering]&gt; but was:&lt;[86]&gt;" type="org.junit.ComparisonFailure">
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+When a user requests the message from the endpoint "intentclassifier" with parameter "Subject :Roti -West Loop Description :Roti - West Loop that the location would need to be closed/marked as closed on all platforms indefinitely due to an ongoing power outage" and parameter "26" and parameter "2024-05-02".passed
+Then the user should receive a response with status code 200................passed
+And the user should receive the output "pause_online_ordering"..............failed
+
+StackTrace:
+org.junit.ComparisonFailure: expected:<[pause_online_ordering]> but was:<[86]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at step.intentClassifierStep.the_user_should_receive_the_output(intentClassifierStep.java:79)
+	at ✽.the user should receive the output "pause_online_ordering"(file:///D:/SOC%20Project/soc-data_driven-testing/src/test/resources/feature/IntentClassifier.feature:59)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="GetMessage from Endpoint" name="Ticket_27 - Verify message retrieval for ticket 27" time="9.735">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+When a user requests the message from the endpoint "intentclassifier" with parameter "Subject :GGET Highland Park Description :GGeT Highland Park
+Issue: online food orders must turn off from 12:30p-1p (solo kitchen team) today" and parameter "27" and parameter "2024-05-01".passed
+Then the user should receive a response with status code 200................passed
+And the user should receive the output "pause_online_ordering"..............passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="GetMessage from Endpoint" name="Ticket_28 - Verify message retrieval for ticket 28" time="9.949">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+When a user requests the message from the endpoint "intentclassifier" with parameter "Subject :GGET Wifi down - ROW Description :wifi not working at the GGEt ROW" and parameter "28" and parameter "2024-05-05".passed
+Then the user should receive a response with status code 200................passed
+And the user should receive the output "network_alert"......................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="GetMessage from Endpoint" name="Ticket_29 - Verify message retrieval for ticket 29" time="9.274">
+        <failure message="expected:&lt;[pause_online_ordering]&gt; but was:&lt;[86]&gt;" type="org.junit.ComparisonFailure">
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+When a user requests the message from the endpoint "intentclassifier" with parameter "Subject :GGET Montana Description :GGET Location: Culver City
+Request: temporary hours for the next couple weeks starting 3/7 will close every day at 4pm. Please keep the opening hours and kitchen hours the same. Thanks!" and parameter "29" and parameter "2024-04-20".passed
+Then the user should receive a response with status code 200................passed
+And the user should receive the output "pause_online_ordering"..............failed
+
+StackTrace:
+org.junit.ComparisonFailure: expected:<[pause_online_ordering]> but was:<[86]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at step.intentClassifierStep.the_user_should_receive_the_output(intentClassifierStep.java:79)
+	at ✽.the user should receive the output "pause_online_ordering"(file:///D:/SOC%20Project/soc-data_driven-testing/src/test/resources/feature/IntentClassifier.feature:80)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Verify RPA" name="RPA call for valid date with 00 time and present date" time="3.954">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+And request body............................................................passed
+When user send a post request to the endpoint "kitchenclosure/automation"...passed
+Then user should receive status code 200....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Verify RPA" name="RPA call for past date" time="2.963">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+And request body............................................................passed
+When user send a post request to the endpoint "kitchenclosure/automation"...passed
+Then user should receive status code 400....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Verify RPA" name="RPA call for past date with 00 time" time="3.164">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+And request body............................................................passed
+When user send a post request to the endpoint "kitchenclosure/automation"...passed
+Then user should receive status code 200....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Verify RPA" name="RPA call for future date" time="4.076">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+And request body............................................................passed
+When user send a post request to the endpoint "kitchenclosure/automation"...passed
+Then user should receive status code 200....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Verify Network Down Message" name="Test_1 - Add Network Down message to the endpoint" time="12.353">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+When question "The security appliance in the 'PA - Chestnut - appliance' network    failed over to using uplink Internet 2 because the primary link has become unavailable.   It will return to using the primary uplink when it becomes available.  There has been a total of 1 failover event detected: At 10:11 AM EDT on Oct 12, the security appliance switched to using  Internet 2 as its uplink.  See the alerting security appliance at https://n495.meraki.com/PA-Chestnut-appl/n/AljTfaUd/manage/nodes/show   - Cisco Meraki   This email was automatically generated; please do not reply. You can change your alert delivery settings at https://n495.meraki.com/PA-Chestnut-appl/n/AljTfaUd/manage/configure/alerts",session_id "session2001s".passed
+And user send a post request to the endpoint "llm-conversation/network_alert/invoke".passed
+Then user should receive status code 200....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Verify Network Down Message" name="Test_2 - Add Network Down message to the endpoint" time="20.228">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+When question "The security appliance in the 'NY - Wall St - appliance' network    failed over to using uplink Internet 2 because the primary link has become unavailable.   It will return to using the primary uplink when it becomes available.  There has been a total of 1 failover event detected: At 12:08 AM EDT on May 12, the security appliance switched to using  Internet 2 as its uplink.  See the alerting security appliance at https://n495.meraki.com/NY-Wall-St-appli/n/r28X-dUd/manage/nodes/show   - Cisco Meraki   This email was automatically generated; please do not reply. You can change your alert delivery settings at https://n495.meraki.com/NY-Wall-St-appli/n/r28X-dUd/manage/configure/alerts",session_id "session2002".passed
+And user send a post request to the endpoint "llm-conversation/network_alert/invoke".passed
+Then user should receive status code 200....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Verify Network Down Message" name="Test_3 - Add Network Down message to the endpoint" time="13.129">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+When question "The security appliance in the 'MD - College Park - appliance' network    failed over to using uplink Internet 2 because the primary link has become unavailable.   It will return to using the primary uplink when it becomes available.  There has been a total of 1 failover event detected: At 04:23 AM EDT on Jul  2, the security appliance switched to using  Internet 2 as its uplink.  See the alerting security appliance at https://n495.meraki.com/MD-College-Park-/n/IvDnhbUd/manage/nodes/show   - Cisco Meraki   This email was automatically generated; please do not reply. You can change your alert delivery settings at https://n495.meraki.com/MD-College-Park-/n/IvDnhbUd/manage/configure/alerts",session_id "session2003".passed
+And user send a post request to the endpoint "llm-conversation/network_alert/invoke".passed
+Then user should receive status code 200....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Verify Network Down Message" name="Test_4 - Add Network Down message to the endpoint" time="1,685.008">
+        <failure message="Failed to send POST request: Software caused connection abort: recv failed" type="java.lang.AssertionError">
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+When question "The security appliance in the 'VA - Ashburn - appliance' network    failed over to using uplink Internet 2 because the primary link has become unavailable.   It will return to using the primary uplink when it becomes available.  There has been a total of 1 failover event detected: At 04:52 AM EDT on Jul  3, the security appliance switched to using  Internet 2 as its uplink.  See the alerting security appliance at https://n495.meraki.com/VA-Ashburn-appli/n/03de8bUd/manage/nodes/show   - Cisco Meraki   This email was automatically generated; please do not reply. You can change your alert delivery settings at https://n495.meraki.com/VA-Ashburn-appli/n/03de8bUd/manage/configure/alerts",session_id "session2004".passed
+And user send a post request to the endpoint "llm-conversation/network_alert/invoke".failed
+Then user should receive status code 200....................................skipped
+
+StackTrace:
+java.lang.AssertionError: Failed to send POST request: Software caused connection abort: recv failed
+	at org.junit.Assert.fail(Assert.java:89)
+	at step.SocDBStep.userSendAPostRequestToTheEndpoint(SocDBStep.java:136)
+	at ✽.user send a post request to the endpoint "llm-conversation/network_alert/invoke"(file:///D:/SOC%20Project/soc-data_driven-testing/src/test/resources/feature/NetworkAlert.feature:31)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Verify Network Down Message" name="Test_5 - Add Network Down message to the endpoint" time="241.327">
+        <failure message="expected:&lt;200&gt; but was:&lt;499&gt;" type="java.lang.AssertionError">
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+When question "The security appliance in the 'Spring Branch - appliance' network    failed over to using uplink Internet 2 because the primary link has become unavailable.   It will return to using the primary uplink when it becomes available.  There has been a total of 1 failover event detected: At 03:56 PM CDT on Mar 28, the security appliance switched to using  Internet 2 as its uplink.  See the alerting security appliance at https://n114.meraki.com/Spring-Branch-ap/n/XyPa1aYb/manage/nodes/show   - Cisco Meraki   This email was automatically generated; please do not reply. You can change your alert delivery settings at https://n114.meraki.com/Spring-Branch-ap/n/XyPa1aYb/manage/configure/alerts",session_id "session2005".passed
+And user send a post request to the endpoint "llm-conversation/network_alert/invoke".passed
+Then user should receive status code 200....................................failed
+
+StackTrace:
+java.lang.AssertionError: expected:<200> but was:<499>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at step.SocDBStep.userShouldReceiveStatusCode(SocDBStep.java:46)
+	at ✽.user should receive status code 200(file:///D:/SOC%20Project/soc-data_driven-testing/src/test/resources/feature/NetworkAlert.feature:40)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Verify Network Down Message" name="Test_6 - Add Network Down message to the endpoint" time="241.323">
+        <failure message="expected:&lt;200&gt; but was:&lt;499&gt;" type="java.lang.AssertionError">
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+When question "The security appliance in the 'VA - Carlyle - appliance' network    failed over to using uplink Internet 2 because the primary link has become unavailable.   It will return to using the primary uplink when it becomes available.  There has been a total of 1 failover event detected: At 04:36 PM EST on Nov 14, the security appliance switched to using  Internet 2 as its uplink.  See the alerting security appliance at https://n495.meraki.com/VA-Carlyle-appli/n/miTbucUd/manage/nodes/show   - Cisco Meraki   This email was automatically generated; please do not reply. You can change your alert delivery settings at https://n495.meraki.com/VA-Carlyle-appli/n/miTbucUd/manage/configure/alerts",session_id "session2006".passed
+And user send a post request to the endpoint "llm-conversation/network_alert/invoke".passed
+Then user should receive status code 200....................................failed
+
+StackTrace:
+java.lang.AssertionError: expected:<200> but was:<499>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at step.SocDBStep.userShouldReceiveStatusCode(SocDBStep.java:46)
+	at ✽.user should receive status code 200(file:///D:/SOC%20Project/soc-data_driven-testing/src/test/resources/feature/NetworkAlert.feature:48)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Verify Network Down Message" name="Test_7 - Add Network Down message to the endpoint" time="241.348">
+        <failure message="expected:&lt;200&gt; but was:&lt;499&gt;" type="java.lang.AssertionError">
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+When question "The security appliance in the 'Georgetown - appliance' network    failed over to using uplink Internet 2 because the primary link has become unavailable.   It will return to using the primary uplink when it becomes available.  There has been a total of 1 failover event detected: At 01:22 PM CDT on Jul 13, the security appliance switched to using  Internet 2 as its uplink.  See the alerting security appliance at https://n114.meraki.com/Georgetown-appli/n/0M76tbYb/manage/nodes/show   - Cisco Meraki   This email was automatically generated; please do not reply. You can change your alert delivery settings at https://n114.meraki.com/Georgetown-appli/n/0M76tbYb/manage/configure/alerts",session_id "session2007".passed
+And user send a post request to the endpoint "llm-conversation/network_alert/invoke".passed
+Then user should receive status code 200....................................failed
+
+StackTrace:
+java.lang.AssertionError: expected:<200> but was:<499>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at step.SocDBStep.userShouldReceiveStatusCode(SocDBStep.java:46)
+	at ✽.user should receive status code 200(file:///D:/SOC%20Project/soc-data_driven-testing/src/test/resources/feature/NetworkAlert.feature:56)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Verify Network Down Message" name="Test_8 - Add Network Down message to the endpoint" time="241.317">
+        <failure message="expected:&lt;200&gt; but was:&lt;499&gt;" type="java.lang.AssertionError">
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+When question "The security appliance in the 'DC - Skyland - appliance' network    failed over to using uplink Internet 2 because the primary link has become unavailable.   It will return to using the primary uplink when it becomes available.  There has been a total of 1 failover event detected: At 10:32 AM EDT on Apr  3, the security appliance switched to using  Internet 2 as its uplink.  See the alerting security appliance at https://n495.meraki.com/DC-Skyland-appli/n/pxq3GbVh/manage/nodes/show   - Cisco Meraki   This email was automatically generated; please do not reply. You can change your alert delivery settings at https://n495.meraki.com/DC-Skyland-appli/n/pxq3GbVh/manage/configure/alerts",session_id "session2008".passed
+And user send a post request to the endpoint "llm-conversation/network_alert/invoke".passed
+Then user should receive status code 200....................................failed
+
+StackTrace:
+java.lang.AssertionError: expected:<200> but was:<499>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at step.SocDBStep.userShouldReceiveStatusCode(SocDBStep.java:46)
+	at ✽.user should receive status code 200(file:///D:/SOC%20Project/soc-data_driven-testing/src/test/resources/feature/NetworkAlert.feature:64)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Verify Network Down Message" name="Test_9 - Add Network Down message to the endpoint" time="241.585">
+        <failure message="expected:&lt;200&gt; but was:&lt;502&gt;" type="java.lang.AssertionError">
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+When question "The security appliance in the 'VA - Woodbridge - appliance' network    failed over to using uplink Internet 2 because the primary link has become unavailable.   It will return to using the primary uplink when it becomes available.  There has been a total of 1 failover event detected: At 08:12 AM EST on Mar  8, the security appliance switched to using  Internet 2 as its uplink.  See the alerting security appliance at https://n495.meraki.com/VA-Woodbridge-ap/n/VFKcpbUd/manage/nodes/show   - Cisco Meraki   This email was automatically generated; please do not reply. You can change your alert delivery settings at https://n495.meraki.com/VA-Woodbridge-ap/n/VFKcpbUd/manage/configure/alerts",session_id "session2009".passed
+And user send a post request to the endpoint "llm-conversation/network_alert/invoke".passed
+Then user should receive status code 200....................................failed
+
+StackTrace:
+java.lang.AssertionError: expected:<200> but was:<502>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at step.SocDBStep.userShouldReceiveStatusCode(SocDBStep.java:46)
+	at ✽.user should receive status code 200(file:///D:/SOC%20Project/soc-data_driven-testing/src/test/resources/feature/NetworkAlert.feature:72)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Verify Network Down Message" name="Test_10 - Add Network Down message to the endpoint" time="241.588">
+        <failure message="expected:&lt;200&gt; but was:&lt;499&gt;" type="java.lang.AssertionError">
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+When question "Hey having some wifi issues here at weho was hoping you could help",session_id "session2010".passed
+And user send a post request to the endpoint "llm-conversation/network_alert/invoke".passed
+Then user should receive status code 200....................................failed
+
+StackTrace:
+java.lang.AssertionError: expected:<200> but was:<499>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at step.SocDBStep.userShouldReceiveStatusCode(SocDBStep.java:46)
+	at ✽.user should receive status code 200(file:///D:/SOC%20Project/soc-data_driven-testing/src/test/resources/feature/NetworkAlert.feature:80)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Verify Network Down Message" name="Test_11 - Add Network Down message to the endpoint" time="241.302">
+        <failure message="expected:&lt;200&gt; but was:&lt;504&gt;" type="java.lang.AssertionError">
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+When question "You have received the following alert generated by UniFi Network  Plant Power - UCSD Alert status -  Alert - Temporary Internet Failover  Device details Device Name: Plant Power - UCSD Time: Dec 31, 2022 at 7:27 AM  Device url: https://unifi.scienceoncall.com:8443/manage",session_id "session2011".passed
+And user send a post request to the endpoint "llm-conversation/network_alert/invoke".passed
+Then user should receive status code 200....................................failed
+
+StackTrace:
+java.lang.AssertionError: expected:<200> but was:<504>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at step.SocDBStep.userShouldReceiveStatusCode(SocDBStep.java:46)
+	at ✽.user should receive status code 200(file:///D:/SOC%20Project/soc-data_driven-testing/src/test/resources/feature/NetworkAlert.feature:88)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Verify Network Down Message" name="Test_12 - Add Network Down message to the endpoint" time="91.158">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+When question "Hi,  The monitor La Cocinita (lacocinita.hopto.org) is currently DOWN (Host Is Unreachable)  Event timestamp: 2022-05-10 18:19:30 UTC-5  UptimeRobot will alert you when it is back up.   Sincerely,  UptimeRobot UptimeRobot (https://uptimerobot.com) Follow on Twitter (https://twitter.com/uptimerobot) Like on facebook (https://facebook.com/uptimerobot)",session_id "session2012".passed
+And user send a post request to the endpoint "llm-conversation/network_alert/invoke".passed
+Then user should receive status code 200....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Verify Network Down Message" name="Test_13 - Add Network Down message to the endpoint" time="18.69">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+When question "Hi,  The monitor Charlie was a sinner. (50.246.163.6) is currently DOWN (Host Is Unreachable)  Event timestamp: 2022-05-08 20:11:00 UTC-5  UptimeRobot will alert you when it is back up.   Sincerely,  UptimeRobot UptimeRobot (https://uptimerobot.com) Follow on Twitter (https://twitter.com/uptimerobot) Like on facebook (https://facebook.com/uptimerobot)",session_id "session2013".passed
+And user send a post request to the endpoint "llm-conversation/network_alert/invoke".passed
+Then user should receive status code 200....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Verify Network Down Message" name="Test_14 - Add Network Down message to the endpoint" time="18.178">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+When question "Hello team    My wifi went down I have no internet connection.   Do I restart my own box or is it something you can do ? -- Take care, Nancy .H",session_id "session2014".passed
+And user send a post request to the endpoint "llm-conversation/network_alert/invoke".passed
+Then user should receive status code 200....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Verify Network Down Message" name="Test_15 - Add Network Down message to the endpoint" time="19.498">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+When question "Hi,  The monitor Empty Bottle/Pizza Friendly Pizza (ebottle.ignorelist.com) is currently DOWN (Host Is Unreachable)  Event timestamp: 2022-04-29 02:18:01 UTC-5  UptimeRobot will alert you when it is back up.   Sincerely,  UptimeRobot UptimeRobot (https://uptimerobot.com) Follow on Twitter (https://twitter.com/uptimerobot) Like on facebook (https://facebook.com/uptimerobot)",session_id "session2015".passed
+And user send a post request to the endpoint "llm-conversation/network_alert/invoke".passed
+Then user should receive status code 200....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Verify Network Down Message" name="Test_16 - Add Network Down message to the endpoint" time="18.216">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+When question "Go to monitor \u2192 (https://uptimerobot.com/dashboard?utm_source=alertMessage&utm_medium=email&utm_campaign=down-sub-users-pro&utm_content=headerLink#785751700)\n\nGGET - Row is down.\n\nHello Science On Call,\n\nWe just detected an incident on your monitor. Your service is currently down.\n\nWe will alert you when it's up again.\n\nMonitor name\n\nGGET - Row\n\n-------------------------------\nChecked URL\n\ngget-the-row-rcgkrqbghz.dynamic-m.com\n\n-------------------------------\nRoot cause\n\nHost Is Unreachable\n\n-------------------------------\nIncident started at\n\n2023-09-28 17:35:55\n\n-------------------------------\n\nView incident details (https://uptimerobot.com/dashboard?incidentId=349553224&utm_source=alertMessage&utm_medium=email&utm_campaign=down-sub-users-pro&utm_content=viewIncident#mainDashboard)\n\n Comment incident (https://uptimerobot.com/dashboard?incidentId=349553224&utm_source=alertMessage&utm_medium=email&utm_campaign=down-sub-users-pro&utm_content=commentIncident#mainDashboard)\n\nTIP: Keep your teammates notified!\n\nYou can now add your teammates to your account and share your resources and monitors. They will have their login credentials and receive alerts about incidents via email, SMS, or voice call.\n\nInvite teammates! (https://uptimerobot.com/team.php?utm_source=alertMessage&utm_medium=email&utm_campaign=down-sub-usersPaid&utm_content=upsellCTA)\n\nThis email was sent by UptimeRobot (https://uptimerobot.com/?utm_source=alertMessage&utm_medium=email&utm_campaign=down-sub-users-pro&utm_content=footerLink) . You can update your alert preferences in the dashboard (https://uptimerobot.com/dashboard?utm_source=alertMessage&utm_medium=email&utm_campaign=down-sub-users-pro&utm_content=footerSetting) .",session_id "session2016s".passed
+And user send a post request to the endpoint "llm-conversation/network_alert/invoke".passed
+Then user should receive status code 200....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Normalization endpoint for editing kitchen closure message" name="Ticket_20 - Edit kitchen closure message to the endpoint" time="1.608">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+And message "NAME: &pizza\nLOCATION: Charles Village MD\nINTENT: pause_online_ordering\nCLOSING_TIME: 2024-03-16 22:00:00\nREOPEN_TIME: 2024-03-16 00:45:00\nFULL_PARTIAL_CLOSING: full\nONLINE_ORDERING: false\n" and intent "pause_online_ordering".passed
+When user send a post request to the endpoint "kitchen-normalization/"......passed
+Then user should receive status code 200....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Normalization endpoint for editing kitchen closure message" name="Ticket_21 - Edit kitchen closure message to the endpoint" time="1.151">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+And message "Here is the extracted information in JSON format:\n\n{\n\"name\": \"Mooyah Burger\",\n\"location\": \"Carlsbad\",\n\"closing_time\": \"2024-03-01 20:00:00\",\n\"reopen_time\": null,\n\"full_partial_closing\": \"full\",\n\"online_ordering\": null\n}\n\nLet me know if you need any further assistance!" and intent "pause_online_ordering".passed
+When user send a post request to the endpoint "kitchen-normalization/"......passed
+Then user should receive status code 200....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Normalization endpoint for editing kitchen closure message" name="Ticket_22 - Edit kitchen closure message to the endpoint" time="1.165">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+And message "```json\n{\n  \"name\": \"Roti\",\n  \"location\": \"SLP\",\n  \"closing_time\": \"2024-02-29 18:00:00\",\n  \"reopen_time\": null,\n  \"full_partial_closing\": \"full\",\n  \"online_ordering\": true\n}\n```" and intent "pause_online_ordering".passed
+When user send a post request to the endpoint "kitchen-normalization/"......passed
+Then user should receive status code 200....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Normalization endpoint for editing kitchen closure message" name="Ticket_23 - Edit kitchen closure message to the endpoint" time="1.167">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+And message "Here is the extracted information in JSON format:\n\n```\n{\n  \"name\": \"PLNT Burger\",\n  \"location\": \"DC, Virginia, Boston\",\n  \"closing_time\": \"2024-03-31 18:00:00\",\n  \"reopen_time\": null,\n  \"full_partial_closing\": \"full\",\n  \"online_ordering\": null\n}\n```\n\nLet me know if this is correct!" and intent "pause_online_ordering".passed
+When user send a post request to the endpoint "kitchen-normalization/"......passed
+Then user should receive status code 200....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Normalization endpoint for editing kitchen closure message" name="Ticket_24 - Edit kitchen closure message to the endpoint" time="1.213">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+And message "```json\n[\n{\n\"name\": \"Beatnic\",\n\"location\": \"Soho\",\n\"closing_time\": null,\n\"reopen_time\": null,\n\"full_partial_closing\": null,\n\"online_ordering\": \"paused\"\n},\n{\n\"name\": \"Beatnic\",\n\"location\": \"Seaport\",\n\"closing_time\": null,\n\"reopen_time\": null,\n\"full_partial_closing\": null,\n\"online_ordering\": \"unpaused\"\n}\n]\n```" and intent "pause_online_ordering".passed
+When user send a post request to the endpoint "kitchen-normalization/"......passed
+Then user should receive status code 200....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Add Kitchen closure Message" name="Test_20 - Add kitchen closure message to the endpoint" time="13.703">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+When session_id "session20",human_input "GGET Montana GGET Location: Montana Ave/Santa Monica CA Request: @U023631H5QC Montana's kitchen will close today at 2pm. Can you please turn off online food orders at 2pm today? Thank you.Give me in json",current_date "2/20/2024".passed
+And user send a post request to the endpoint "llm-conversation/pause_online_ordering/invoke".passed
+Then user should receive status code 200....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Add Kitchen closure Message" name="Test_21 - Add kitchen closure message to the endpoint" time="11.311">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+When session_id "sessions22",human_input "GGeT closing Montana location Location:Montana Ave, Santa Monica CA Request:GGET Montana kitchen closing at 2pm Description :@U023631H5QC Montana's kitchen will close today at 2pm. Can you please turn off online food orders at 2pm today? Thank you.give in json",current_date "2/28/2024".passed
+And user send a post request to the endpoint "llm-conversation/pause_online_ordering/invoke".passed
+Then user should receive status code 200....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Add Kitchen closure Message" name="Test_22 - Add kitchen closure message to the endpoint" time="9.737">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+When session_id "sessions23",human_input "Roti SLP close earlyLocation:   Request:please shut off online ordering an roti.com today at 6pm. Give me in json",current_date "2/28/2024".passed
+And user send a post request to the endpoint "llm-conversation/pause_online_ordering/invoke".passed
+Then user should receive status code 200....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Add Kitchen closure Message" name="Test_23 - Add kitchen closure message to the endpoint" time="11.014">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+When session_id "session23",human_input "Mooyah burger - Carlsbad Location:   Request:stop ordering at the Mooyah Burger Carlsbad at 8pm on 3/1/24. Give me in json",current_date "3/1/24".passed
+And user send a post request to the endpoint "llm-conversation/pause_online_ordering/invoke".passed
+Then user should receive status code 200....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Add Kitchen closure Message" name="Test_24 - Add kitchen closure message to the endpoint" time="11.776">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+When session_id "sessions24",human_input "GGeT Row Location:   Request:GGeT Row
+Issue: online food orders must turn off from 12:30p-1p (solo kitchen team) and kitchen close at 2pm. Give me in json",current_date "2/28/24".passed
+And user send a post request to the endpoint "llm-conversation/pause_online_ordering/invoke".passed
+Then user should receive status code 200....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Add Kitchen closure Message" name="Test_25 - Add kitchen closure message to the endpoint" time="10.36">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+When session_id "sessions25",human_input "Gregorys Coffee - GC38 Location:   Request:Hi Team goodmorning, a few customers have been saying the wifi isn't working our music is on and th wifi works on my phone. Is there any way you guys  cab check on the wifi and see if there's anything wrong with it? Thank you in advance for your hel",current_date "${current_date}".passed
+And user send a post request to the endpoint "llm-conversation/pause_online_ordering/invoke".passed
+Then user should receive status code 200....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Verify Printer Down Message" name="Test_1 - Add Printer Down message to the endpoint" time="10.372">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+When question "SOC team,  I just heard from few shop leaders Pickett and Springfield that it is showing no internet connection and printer not printing anything   Is it everywhere or just these shops?  Thank you!! KAMAL BALANI DISTRICT LEADER, OPERATIONS 571 274 5652   &pizza  🍕٩( ´◡` )( ´◡` )۶🍕",session_id "session101".passed
+And user send a post request to the endpoint "llm-conversation/toast_printer_down/invoke".passed
+Then user should receive status code 200....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Verify Printer Down Message" name="Test_2 - Add Printer Down message to the endpoint" time="11.737">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+When question "Yes this is David Nelson at Popeyes on E avenue both of our front terminal printers are not working supposedly we're going to get two new printers but we have not received anything yet can we please get those sent out to us asap thank you",session_id "session102".passed
+And user send a post request to the endpoint "llm-conversation/toast_printer_down/invoke".passed
+Then user should receive status code 200....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Verify Printer Down Message" name="Test_3 - Add Printer Down message to the endpoint" time="19.088">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+When question "Do we have any information on when the new receipt printers will be here for E Avenue I still have two receipt printers that I'm waiting for in my lobby is open I can't print receipts so I need those receipt printers ASAP",session_id "session1003".passed
+And user send a post request to the endpoint "llm-conversation/toast_printer_down/invoke".passed
+Then user should receive status code 200....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Verify Printer Down Message" name="Test_4 - Add Printer Down message to the endpoint" time="18.563">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+When question "iPad printer not printing out customer orders at Charles Village   Kareem  917-697-4553 --    KAREEM HARRIS       **&pizza**  🍕٩( ´◡` )( ´◡` )۶🍕",session_id "session104".passed
+And user send a post request to the endpoint "llm-conversation/toast_printer_down/invoke".passed
+Then user should receive status code 200....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Verify Printer Down Message" name="Test_5 - Add Printer Down message to the endpoint" time="10.442">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+When question "Hey were getting a printer error and can’t open the cash drawer   “Could not open connection to printer ‘toast kitchen printer’”",session_id "session105".passed
+And user send a post request to the endpoint "llm-conversation/toast_printer_down/invoke".passed
+Then user should receive status code 200....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Verify Printer Down Message" name="Test_6 - Add Printer Down message to the endpoint" time="11.405">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+When question "Hey guys, I'm in need of some assistance. My post label printer is not working. I have of course already unplugged everything and plugged it back in. Still not working.  --  TAQUAN HOWIE    &pizza  🍕٩( ´◡` )( ´◡` )۶🍕",session_id "session106".passed
+And user send a post request to the endpoint "llm-conversation/toast_printer_down/invoke".passed
+Then user should receive status code 200....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Verify Printer Down Message" name="Test_7 - Add Printer Down message to the endpoint" time="18.106">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+When question "Hi team,   My shift leader indicated our POS printer is not printing and showing the following error code. Can you please assist?   --  SKY CRUZ SHOP LEADER, JERSEY CITY 929 412 6842‬   &pizza  🍕٩( ´◡` )( ´◡` )۶🍕",session_id "session107".passed
+And user send a post request to the endpoint "llm-conversation/toast_printer_down/invoke".passed
+Then user should receive status code 200....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Update Intent" name="updating intent with all fields filled with new data" time="1.206">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+And request body............................................................passed
+When user hit the endpoint "intents/917"....................................passed
+Then user should receive status code 200....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Verify Thumbs up Thumbs Down" name="Add Thumbs up to the endpoint" time="1.149">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+And request body............................................................passed
+When user send a post request to the endpoint "log/message".................passed
+Then user should receive status code 200....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Verify Thumbs up Thumbs Down" name="Add Thumbs up for the same ticket with different message to the endpoint" time="1.137">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+And request body............................................................passed
+When user send a post request to the endpoint "log/message".................passed
+Then user should receive status code 200....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Verify Thumbs up Thumbs Down" name="Add Thumbs down to the endpoint" time="1.151">
+        <system-out>
+            <![CDATA[Given the base URL of the API is "https://dev-soc-fastapi.azurewebsites.net/".passed
+And request body............................................................passed
+When user send a post request to the endpoint "log/message".................passed
+Then user should receive status code 200....................................passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>
